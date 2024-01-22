@@ -1,4 +1,4 @@
-export enum buttonsEnum {"submit","clear"}
+export enum buttonsEnum {"submit"="submit","clear"="clear"}
 
 export type TVariant = {
     value: string,

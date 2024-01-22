@@ -1,11 +1,73 @@
-body
-  margin: 0
-  padding: 0
-  background-color: whitesmoke
+$prime-color: royalblue
+$bg-color: whitesmoke
+$text-color: whitesmoke
+$danger-color: orangered
 
-#app
+@mixin flex-col
   display: flex
   flex-direction: column
 
-  > div
+body
+  margin: 0
+  padding: 0
+  background-color: $bg-color
+
+  input
+    outline: none
+    border: none
+
+
+#app
+  @include flex-col
+
+  form
+    @include flex-col
     margin: 20px
+    padding: 10px
+    flex-wrap: wrap
+    justify-content: space-around
+    width: 300px
+    height: auto
+    border-radius: 15px
+    background-color: $prime-color
+    color: $text-color
+
+    .form__head, .form__fields, .form__buttons
+      margin: 10px
+
+    .form__fields
+      @include flex-col
+      justify-content: space-between
+      flex-wrap: wrap
+      margin: 5px
+
+      .form__field p
+        margin: 10px 0 0 0
+
+      .form__field input
+        padding: 3px
+        background-color: $bg-color
+        border-radius: 5px
+
+      .form__radio_set
+        display: flex
+        flex-direction: column
+
+        label
+          display: block
+
+
+
+    .form__buttons
+      margin-top: 30px
+
+      input
+        font-size: 1.1em
+        padding: 5px
+        border-radius: 5px
+
+      input[type=reset]
+        background-color: $danger-color
+        color: $text-color
+
+

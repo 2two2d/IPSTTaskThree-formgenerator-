@@ -3,13 +3,64 @@ body {
   padding: 0;
   background-color: whitesmoke;
 }
+body input {
+  outline: none;
+  border: none;
+}
 
 #app {
   display: flex;
   flex-direction: column;
 }
-#app > div {
+#app form {
+  display: flex;
+  flex-direction: column;
   margin: 20px;
+  padding: 10px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 300px;
+  height: auto;
+  border-radius: 15px;
+  background-color: royalblue;
+  color: whitesmoke;
+}
+#app form .form__head, #app form .form__fields, #app form .form__buttons {
+  margin: 10px;
+}
+#app form .form__fields {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 5px;
+}
+#app form .form__fields .form__field p {
+  margin: 10px 0 0 0;
+}
+#app form .form__fields .form__field input {
+  padding: 3px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+}
+#app form .form__fields .form__radio_set {
+  display: flex;
+  flex-direction: column;
+}
+#app form .form__fields .form__radio_set label {
+  display: block;
+}
+#app form .form__buttons {
+  margin-top: 30px;
+}
+#app form .form__buttons input {
+  font-size: 1.1em;
+  padding: 5px;
+  border-radius: 5px;
+}
+#app form .form__buttons input[type=reset] {
+  background-color: orangered;
+  color: whitesmoke;
 }
 
 /*# sourceMappingURL=build.css.map */
