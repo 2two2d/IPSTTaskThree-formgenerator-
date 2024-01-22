@@ -1,6 +1,6 @@
 export enum buttonsEnum {"submit","clear"}
 
-export type TOption = {
+export type TVariant = {
     value: string,
     label: string
 }
@@ -10,7 +10,7 @@ export type TField = {
     attrs: {
         name: string,
         type: string,
-        variants?: TOption[]
+        variants?: TVariant[]
     }
 }
 

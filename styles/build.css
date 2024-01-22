@@ -1,5 +1,15 @@
-h1 {
-  color: green;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: whitesmoke;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+}
+#app > div {
+  margin: 20px;
 }
 
 /*# sourceMappingURL=build.css.map */
