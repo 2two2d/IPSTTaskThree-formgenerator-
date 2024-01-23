@@ -2,9 +2,9 @@ import {buttonsEnum, TField, TForm, TVariant} from "./types/TForm";
 
 
 // функция formGenerator принимает объект с данными для генерации формы и отдаёт HTML node формы
-const formGenerator = (formData: TForm) => {
+const formGenerator = (formData: TForm): HTMLFormElement => {
 
-    let formElement = document.createElement('form')
+    let formElement: HTMLFormElement = document.createElement('form')
     formElement.className = 'form'
 //Первый блок формы - заголовок и описание
     formElement.innerHTML = `<div class="form__head">
@@ -20,13 +20,13 @@ const formGenerator = (formData: TForm) => {
                                                             name="${field.attrs.name}"/>` :
                                                     (field.attrs.type === 'select' ?
                                                         `<select>
-                                                            ${field.attrs.variants.map((option: TVariant)=>{
+                                                            ${field.attrs.variants.map((option: TVariant): string => {
                                                                 return `<option value="${option.value}"
                                                                         >${option.label}</option>`   
                                                             }).join('')}         
                                                         </select>` :
                                                         `<div class="form__radio_set">
-                                                            ${field.attrs.variants.map((variant: TVariant)=>{
+                                                            ${field.attrs.variants.map((variant: TVariant): string => {
                                                                 return `<label>
                                                                             <input type="radio" 
                                                                                 name="radio"
